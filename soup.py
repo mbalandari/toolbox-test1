@@ -1,4 +1,4 @@
 from bs4 import BeautifulSoup
-from xml.dom import minidom
 
-gpx = minidom.parse("broken_data.gpx")
+gpx = open("broken_data.gpx")
+soup = BeautifulSoup(gpx.read(), features="xml")
