@@ -1,6 +1,7 @@
 import geojson
+from shapely.geometry import shape
 
 p = geojson.Point([-92, 37])
-
 geojs = geojson.dumps(p, indent=4)
-print(geojs)
+point = shape(p)
+print(point.wkt)
